@@ -3,6 +3,7 @@ go:
 - 1.11
 install:
 - pip install --user behave requests
+- GO111MODULE=on go install github.com/kisielk/errcheck
 script:
 - GO111MODULE=on go vet ./...
 - GO111MODULE=on go test ./...
